@@ -1,0 +1,85 @@
+:root{
+	--bg-button: #f1f1f1;
+}
+
+.calculator {
+	background-color: #ffffff;
+	border-radius: 10px;
+	box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+	width: 280px;
+	padding: 2px;
+	display: grid;
+	grid-gap: 0;
+	grid-template-rows: minmax(60px, auto) repeat(5, minmax(60px, 1fr));
+	grid-template-columns: repeat(4, 1fr);
+	overflow: hidden;
+	color: #282828;
+}
+
+.display {
+	background-color: #2c2a2a;
+	color: #ddd;
+	margin-bottom: 1px;
+	height: 70px;
+	border-radius: 10px 10px 0px 0px;
+	font-size: 30px;
+	padding: 10px;
+	grid-row: 1 / 2;
+	grid-column: 1 / -1;
+	display: flex;
+	flex-direction: column;
+	justify-content: flex-end;
+	text-align: right;
+	font-size: 50px;
+}
+
+.reduceFont{
+	font-size: 25px;
+}
+
+
+.buttons {
+	display: grid;
+	grid-template-columns: repeat(4, 1fr);
+	grid-gap: 0;
+	grid-row: 2 / -1;
+	grid-column: 1 / -1;
+}
+
+.button {
+	background-color: var(--bg-button);
+	margin: 0.5px;
+	border-radius: 0;
+	font-size: 24px;
+	padding: 20px;
+	text-align: center;
+	cursor: pointer;
+	transition: background-color 0.3s, transform 0.2s;
+	border-style: none;
+	outline: none;
+}
+
+.button.operator {
+	background-color: #ff9500;
+	color: white;
+}
+
+.button.clear {
+	grid-column: span 3;
+}
+
+.button.zero {
+	grid-column: span 2;
+}
+
+.br-right {
+	border-bottom-right-radius: 10px;
+}
+
+.br-left {
+	border-bottom-left-radius: 10px;
+}
+
+.button:hover {
+	background-color: #ccc;
+}
