@@ -1,0 +1,61 @@
+body {
+	margin: 0;
+	padding: 0;
+	overflow: hidden;
+}
+
+.math-background {
+	position: fixed;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100%;
+	z-index: -1;
+	animation: rotateMathBackground 30s linear infinite;
+}
+
+.operation {
+	position: absolute;
+	font-size: 10rem;
+	color: rgba(0, 0, 0, 0.1);
+}
+
+:root{
+	--percentPosition: 15%;
+}
+
+.addition {
+	top: var(--percentPosition);
+	left: var(--percentPosition);
+}
+
+.subtraction {
+	bottom: var(--percentPosition);
+	left: var(--percentPosition);
+}
+
+.multiplication {
+	top: var(--percentPosition);
+	right: var(--percentPosition);
+}
+
+.division {
+	bottom: var(--percentPosition);
+	right: var(--percentPosition);
+}
+
+@keyframes rotateMathBackground {
+	0% {
+		transform: rotate(0deg);
+	}
+
+	100% {
+		transform: rotate(360deg);
+	}
+}
+
+@media (max-width: 719px) {
+	:root{
+		--percentPosition: 5%;
+	}
+}
