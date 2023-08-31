@@ -40,6 +40,7 @@ export default class Calculator extends Component {
 
 			const values = [...this.state.values];
 
+			console.log(currentOperation);
 			switch (currentOperation) {
 				
 				case '+':
@@ -54,7 +55,7 @@ export default class Calculator extends Component {
 					values[0] = values[0] * values[1];
 					break;
 
-				case '/':
+				case '÷':
 					values[0] = values[0] / values[1];
 					break;
 
