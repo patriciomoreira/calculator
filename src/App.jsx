@@ -1,4 +1,3 @@
-import "./App.css";
 import Calculator from "./Calculator/Calculator";
 import MathBackground from "./style/MathBackground";
 
